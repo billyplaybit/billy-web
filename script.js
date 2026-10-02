@@ -1,20 +1,16 @@
 /* ============================================================
-   WEB PROFILE TEMPLATE - SCRIPT
+   WEB PROFILE - SCRIPT
    UniEspinal · Técnico Profesional en Programación Web
 
-   THIS IS THE FILE YOU WILL WORK ON THE MOST.
-
-   Below there are two dictionaries: ES and EN.
-   They have exactly the same keys, but different texts.
-
-   IMPORTANT: the English version is NOT a translation of the
-   Spanish version. A professional profile in English follows
-   different rules. Read NOTES.md before you write it.
+   Dos diccionarios: ES y EN. Tienen las mismas claves (data-i18n
+   del index.html) pero distintos textos. Para cambiar un texto,
+   busca su clave aquí. Editar el HTML no sirve: este archivo lo
+   reemplaza al cargar la página.
    ============================================================ */
 
 
 /* ------------------------------------------------------------
-   1. SPANISH TEXTS
+   1. TEXTOS EN ESPAÑOL
    ------------------------------------------------------------ */
 const ES = {
   "nav.home":      "INICIO",
@@ -27,13 +23,13 @@ const ES = {
   "hero.role": "Desarrollador Web · Soporte Técnico",
 
   "about.title":          "Sobre Mí",
-  "about.text":           "programacion web, estoy interezado ya que la tecnoligia es el futuro y me gustaria trabajar de programador",
+  "about.text":           "Estudio programación web en UniEspinal. Me interesa porque la tecnología es el futuro y me gustaría trabajar como programador.",
   "about.infoTitle":      "Información",
   "about.labelLocation":  "Ubicación",
-  "about.valueLocation":  "No relevante",
+  "about.valueLocation":  "Colombia",
   "about.labelEmail":     "Correo",
   "about.labelLanguages": "Idiomas",
-  "about.valueLanguages": "Español (nativo) · Inglés ([tu nivel])",
+  "about.valueLanguages": "Español (nativo) · Inglés (básico)",
   "about.labelStatus":    "Disponibilidad",
   "about.valueStatus":    "Abierto a prácticas",
   "about.interestsTitle": "Intereses",
@@ -56,27 +52,27 @@ const ES = {
   "resume.experience": "Experiencia",
 
   "edu.1.title": "Técnico Profesional en Programación Web",
-  "edu.1.text":  "se utilizar la inteligencia artificial para que me ayude a crear mis paginas",
-  "edu.2.title": "programacion",
-  "edu.2.text":  "utilizar la IA a mi favor",
+  "edu.1.text":  "Aprendo desarrollo web y sé utilizar la inteligencia artificial como apoyo para crear mis páginas.",
+  "edu.2.title": "Programación",
+  "edu.2.text":  "He desarrollado varias páginas web y aprendo a usar la IA a mi favor.",
 
-  "exp.1.title": "hice una pagina web para vender ropa",
-  "exp.1.text":  "la hice para una clase de programacion y con ello pude ganar experiencia con la IA",
-  "exp.2.title": "[Rol o tipo de proyecto]",
-  "exp.2.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.",
+  "exp.1.title": "Página web para vender ropa",
+  "exp.1.text":  "La hice para una clase de programación y con ella gané experiencia trabajando con IA.",
+  "exp.2.title": "[Borra este bloque en index.html]",
+  "exp.2.text":  "[Borra este bloque en index.html]",
 
   "portfolio.title": "Proyectos",
-  "project.1.title": "[Nombre del proyecto]",
-  "project.1.text":  "[Tecnologías usadas]",
+  "project.1.title": "Tienda de ropa",
+  "project.1.text":  "Proyecto de clase",
   "project.2.title": "[Nombre del proyecto]",
   "project.2.text":  "[Tecnologías usadas]",
   "project.3.title": "[Nombre del proyecto]",
   "project.3.text":  "[Tecnologías usadas]",
 
-  "contact.title":         "No relevante",
-  "contact.intro":         "No relevante",
-  "contact.emailLabel":    "No relevante",
-  "contact.linkedinValue": "No relevante",
+  "contact.title":         "Contacto",
+  "contact.intro":         "¿Tienes un proyecto o una vacante? Escríbeme.",
+  "contact.emailLabel":    "Correo",
+  "contact.linkedinValue": "Mi perfil profesional",
 
   "footer.note": "Billy · Técnico Profesional en Programación Web · UniEspinal"
 };
@@ -84,11 +80,7 @@ const ES = {
 
 /* ------------------------------------------------------------
    2. ENGLISH TEXTS
-
-   Before writing this section, remember:
-   - Use action verbs: built, configured, fixed, tested, supported.
-   - Do not include age, marital status or a home address.
-   - Do not translate word by word. Rewrite.
+   (rewritten, not translated word by word)
    ------------------------------------------------------------ */
 const EN = {
   "nav.home":      "HOME",
@@ -101,13 +93,13 @@ const EN = {
   "hero.role": "Web Developer · Technical Support",
 
   "about.title":          "About Me",
-  "about.text":           "[Write two or three sentences about yourself: what you study, what interests you in web development, and what you are looking for now.]",
+  "about.text":           "I study web programming at UniEspinal. I am interested in development because technology is the future, and I am looking for an internship as a developer.",
   "about.infoTitle":      "Information",
   "about.labelLocation":  "Location",
-  "about.valueLocation":  "[City], Colombia",
+  "about.valueLocation":  "Colombia",
   "about.labelEmail":     "Email",
   "about.labelLanguages": "Languages",
-  "about.valueLanguages": "Spanish (native) · English ([your level])",
+  "about.valueLanguages": "Spanish (native) · English (basic)",
   "about.labelStatus":    "Availability",
   "about.valueStatus":    "Open to internships",
   "about.interestsTitle": "Interests",
@@ -130,35 +122,34 @@ const EN = {
   "resume.experience": "Experience",
 
   "edu.1.title": "Professional Technician in Web Programming",
-  "edu.1.text":  "[One or two sentences about what you are learning and what you can do now.]",
-  "edu.2.title": "[Course or certificate]",
-  "edu.2.text":  "[What you learned and how you use it.]",
+  "edu.1.text":  "Learning web development and using AI tools to help me build my pages.",
+  "edu.2.title": "Programming",
+  "edu.2.text":  "Developed several web pages and learned to use AI as a tool in my workflow.",
 
-  "exp.1.title": "[Role or type of project]",
-  "exp.1.text":  "[What you did, which tools you used, and what the result was.]",
-  "exp.2.title": "[Role or type of project]",
-  "exp.2.text":  "[What you did, which tools you used, and what the result was.]",
+  "exp.1.title": "Clothing store website",
+  "exp.1.text":  "Built an online clothing store website for a programming class, using AI tools to support development and gaining hands-on experience.",
+  "exp.2.title": "[Delete this block in index.html]",
+  "exp.2.text":  "[Delete this block in index.html]",
 
   "portfolio.title": "Projects",
-  "project.1.title": "[Project name]",
-  "project.1.text":  "[Technologies used]",
+  "project.1.title": "Clothing store",
+  "project.1.text":  "Class project",
   "project.2.title": "[Project name]",
   "project.2.text":  "[Technologies used]",
   "project.3.title": "[Project name]",
   "project.3.text":  "[Technologies used]",
 
   "contact.title":         "Contact",
-  "contact.intro":         "[One sentence inviting people to write to you. Example: Have a project or a vacancy? Send me a message.]",
+  "contact.intro":         "Have a project or a vacancy? Send me a message.",
   "contact.emailLabel":    "Email",
-  "contact.linkedinValue": "[Your professional profile]",
+  "contact.linkedinValue": "My professional profile",
 
-  "footer.note": "[Your name] · Professional Technician in Web Programming · UniEspinal"
+  "footer.note": "Billy · Professional Technician in Web Programming · UniEspinal"
 };
 
 
 /* ============================================================
-   3. LANGUAGE SWITCHER
-   You do not need to change the code below.
+   3. LANGUAGE SWITCHER (no need to change)
    ============================================================ */
 
 const DICCIONARIOS = { es: ES, en: EN };
@@ -218,10 +209,7 @@ function cerrarMenu() {
 
 /* ============================================================
    5. SKILL BARS
-
-   The width comes from the data-percent attribute in index.html.
-   You can add or remove skills freely: this code does not depend
-   on how many there are.
+   El ancho sale de data-percent en index.html.
    ============================================================ */
 
 function animarHabilidades() {
@@ -256,6 +244,10 @@ function animarHabilidades() {
    6. START
    ============================================================ */
 
+document.addEventListener("DOMContentLoaded", () => {
+  aplicarIdioma("es");
+  animarHabilidades();
+});
 document.addEventListener("DOMContentLoaded", () => {
   aplicarIdioma("es");
   animarHabilidades();
