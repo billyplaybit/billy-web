@@ -27,10 +27,10 @@ const ES = {
   "hero.role": "Desarrollador Web · Soporte Técnico",
 
   "about.title":          "Sobre Mí",
-  "about.text":           "[Escribe aquí dos o tres frases sobre ti: qué estudias, qué te interesa dentro del desarrollo web y qué estás buscando ahora.]",
+  "about.text":           "programacion web, estoy interezado ya que la tecnoligia es el futuro y me gustaria trabajar de programador",
   "about.infoTitle":      "Información",
   "about.labelLocation":  "Ubicación",
-  "about.valueLocation":  "[Ciudad], Colombia",
+  "about.valueLocation":  "No relevante",
   "about.labelEmail":     "Correo",
   "about.labelLanguages": "Idiomas",
   "about.valueLanguages": "Español (nativo) · Inglés ([tu nivel])",
@@ -56,14 +56,14 @@ const ES = {
   "resume.experience": "Experiencia",
 
   "edu.1.title": "Técnico Profesional en Programación Web",
-  "edu.1.text":  "[Una o dos frases sobre lo que estás aprendiendo y qué sabes hacer ahora.]",
-  "edu.2.title": "[Curso o certificación]",
-  "edu.2.text":  "[Qué aprendiste y para qué te sirve.]",
+  "edu.1.text":  "se utilizar la inteligencia artificial para que me ayude a crear mis paginas",
+  "edu.2.title": "programacion",
+  "edu.2.text":  "utilizar la IA a mi favor",
 
-  "exp.1.title": "[Rol o tipo de proyecto]",
-  "exp.1.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
+  "exp.1.title": "hice una pagina web para vender ropa",
+  "exp.1.text":  "la hice para una clase de programacion y con ello pude ganar experiencia con la IA",
   "exp.2.title": "[Rol o tipo de proyecto]",
-  "exp.2.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.]",
+  "exp.2.text":  "[Qué hiciste, con qué herramientas y qué resultado tuvo.",
 
   "portfolio.title": "Proyectos",
   "project.1.title": "[Nombre del proyecto]",
@@ -73,12 +73,12 @@ const ES = {
   "project.3.title": "[Nombre del proyecto]",
   "project.3.text":  "[Tecnologías usadas]",
 
-  "contact.title":         "Contacto",
-  "contact.intro":         "[Una frase invitando a escribirte. Por ejemplo: ¿Tienes un proyecto o una vacante? Escríbeme.]",
-  "contact.emailLabel":    "Correo",
-  "contact.linkedinValue": "[Tu perfil profesional]",
+  "contact.title":         "No relevante",
+  "contact.intro":         "No relevante",
+  "contact.emailLabel":    "No relevante",
+  "contact.linkedinValue": "No relevante",
 
-  "footer.note": "[Tu nombre] · Técnico Profesional en Programación Web · UniEspinal"
+  "footer.note": "Billy · Técnico Profesional en Programación Web · UniEspinal"
 };
 
 
