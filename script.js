@@ -58,8 +58,6 @@ const ES = {
 
   "exp.1.title": "Página web para vender ropa",
   "exp.1.text":  "La hice para una clase de programación y con ella gané experiencia trabajando con IA.",
-  "exp.2.title": "[Borra este bloque en index.html]",
-  "exp.2.text":  "[Borra este bloque en index.html]",
 
   "portfolio.title": "Proyectos",
   "project.1.title": "Tienda de ropa",
