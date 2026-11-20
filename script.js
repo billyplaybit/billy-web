@@ -126,8 +126,6 @@ const EN = {
 
   "exp.1.title": "Clothing store website",
   "exp.1.text":  "Built an online clothing store website for a programming class, using AI tools to support development and gaining hands-on experience.",
-  "exp.2.title": "[Delete this block in index.html]",
-  "exp.2.text":  "[Delete this block in index.html]",
 
   "portfolio.title": "Projects",
   "project.1.title": "Clothing store",
