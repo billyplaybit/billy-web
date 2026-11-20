@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tienda de Ropa de Marca</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .producto {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 180px;
+      padding: 10px;
+      text-align: center;
+    }
+    .producto img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    form {
+      margin-bottom: 30px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    select, input[type="text"], input[type="number"], input[type="url"] {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tienda de Ropa de Marca</h1>
+
+  <form id="formProducto">
+    <h2>Agregar Producto</h2>
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" required>
+      <option value="">Seleccione</option>
+      <option value="busos">Busos</option>
+      <option value="zapatos">Zapatos</option>
+      <option value="pantalones">Pantalones</option>
+    </select>
+
+    <label for="nombre">Nombre del Producto:</label>
+    <input type="text" id="nombre" placeholder="Nombre" required />
+
+    <label for="precio">Precio (COP):</label>
+    <input type="number" id="precio" placeholder="Precio" min="0" required />
+
+    <label for="imagen">URL de Imagen:</label>
+    <input type="url" id="imagen" placeholder="https://ejemplo.com/imagen.jpg" required />
+
+    <button type="submit">Agregar Producto</button>
+  </form>
+
+  <div>
+    <h2>Catálogo de Productos</h2>
+    <div class="catalogo" id="catalogo"></div>
+  </div>
+
+  <script>
+    const catalogoDiv = document.getElementById('catalogo');
+    const form = document.getElementById('formProducto');
+
+    let productos = [
+      {
+        categoria: 'busos',
+        nombre: 'Buzo Nike',
+        precio: 95000,
+        imagen: 'https://example.com/buzo-nike.jpg'
+      },
+      {
+        categoria: 'zapatos',
+        nombre: 'Zapatos Adidas',
+        precio: 150000,
+        imagen: 'https://example.com/zapatos-adidas.jpg'
+      },
+      {
+        categoria: 'pantalones',
+        nombre: 'Pantalón Levi’s',
+        precio: 120000,
+        imagen: 'https://example.com/pantalon-levis.jpg'
+      }
+    ];
+
+    function mostrarProductos() {
+      catalogoDiv.innerHTML = '';
+      productos.forEach(prod => {
+        const div = document.createElement('div');
+        div.className = 'producto';
+        div.innerHTML = `
+          <img src="${prod.imagen}" alt="${prod.nombre}" />
+          <h3>${prod.nombre}</h3>
+          <p>Precio: $${prod.precio.toLocaleString()}</p>
+          <p><em>Categoría: ${prod.categoria}</em></p>
+        `;
+        catalogoDiv.appendChild(div);
+      });
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const categoria = form.categoria.value;
+      const nombre = form.nombre.value.trim();
+      const precio = parseFloat(form.precio.value);
+      const imagen = form.imagen.value.trim();
+
+      if (categoria && nombre && precio >= 0 && imagen) {
+        productos.push({ categoria, nombre, precio, imagen });
+        mostrarProductos();
+        form.reset();
+      } else {
+        alert('Por favor complete todos los campos correctamente.');
+      }
+    });
+
+    mostrarProductos();
+  </script>
+
+</body>
+</html>
